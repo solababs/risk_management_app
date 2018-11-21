@@ -4,6 +4,10 @@ cffi==1.11.5
 cryptography==2.4.1
 Django==2.1.3
 djangorestframework==3.9.0
+graphene==2.1.3
+graphene-django==2.2.0
+graphql-core==2.1
+graphql-relay==0.4.5
 idna==2.7
 promise==2.2.1
 pycparser==2.19
