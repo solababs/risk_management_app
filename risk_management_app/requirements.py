@@ -1,0 +1,13 @@
+aniso8601==3.0.2
+asn1crypto==0.24.0
+cffi==1.11.5
+cryptography==2.4.1
+Django==2.1.3
+djangorestframework==3.9.0
+idna==2.7
+promise==2.2.1
+pycparser==2.19
+pytz==2018.7
+Rx==1.6.1
+singledispatch==3.4.0.3
+six==1.11.0

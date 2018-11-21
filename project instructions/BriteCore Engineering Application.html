@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)https://engineering-application.britecore.com/e/t20e118s10t/ProductEngineer -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="https://engineering-application.britecore.com/favicon.ico"><title>BriteCore Engineering Application</title><link href="./BriteCore Engineering Application_files/app.d4ad7097.css" rel="preload" as="style"><link href="./BriteCore Engineering Application_files/chunk-vendors.888fef25.css" rel="preload" as="style"><link href="./BriteCore Engineering Application_files/app.0f7b804d.js" rel="preload" as="script"><link href="./BriteCore Engineering Application_files/chunk-vendors.f935de2e.js" rel="preload" as="script"><link href="./BriteCore Engineering Application_files/chunk-vendors.888fef25.css" rel="stylesheet"><link href="./BriteCore Engineering Application_files/app.d4ad7097.css" rel="stylesheet"></head><body style=""><noscript><strong>We're sorry but BriteCore Engineering Application doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div><h1 class="ui center aligned header">BriteCore Engineering Application</h1><div class="ui text container"><hr><!----><span><p><em>The link to this test will expire. We recommend that you save this page locally.</em></p><span><h1>Product Development Hiring Project</h1>
+<p>This outlines a recent problem we ran into and came up with a development solution for. We'd like to see how you would handle it. What is most important is gaining some insight into your development process and seeing how you work.</p>
+<h2>Background</h2>
+<p><a href="http://www.britecore.com/">BriteCore</a> is a web-based platform insurance companies use to manage their business. Insurance is a form of risk management. Risks are anything that someone could incur a loss on. BriteCore has historically worked primarily with property-based risks (homes, farms, churches, etc.).</p>
+<h2>Problem</h2>
+<p>Since BriteCore was created to work mostly with property-based insurance, the data model is pretty rigid. The data model assumes that all risks are properties and have addresses. This makes it difficult for BriteCore to work with different forms of insurance like Automobile Policies, Cyber Liability Coverage (protection against hacking), or Prize Insurance (if someone gets a $1 million hole-in-one prize at a golf tournament, the golf course doesn't pay it, they have an insurance policy to cover them).</p>
+<h2>Primary Goal</h2>
+<p>In a github repo, we would like to see you come up with a solution that allows insurers to define their own custom data model for their risks. There should be no database tables called <code>automobiles</code>, <code>houses</code>, or <code>prizes</code>. Instead, insurers should be able to create their own risk types and attach as many different fields as they would like.</p>
+<p>Fields are bits of data like first name, age, zip code, model, serial number, Coverage A limit, or prize dollar amount. Basically any data the carrier would want to collect about the risk. Fields can also be of different types, like text, date, number, currency, and so forth.</p>
+<p>Deliverables will be:</p>
+<ol>
+<li>A README that describes your approach and how to deploy your project.</li>
+<li>Link(s) to the deployed version of your project.</li>
+</ol>
+<ul>
+<li><strong>Bonus points</strong> if you also orchestrate the launch environment in AWS using CloudFormation.</li>
+<li><strong>Mega bonus points</strong> if you host the app in <a href="https://aws.amazon.com/lambda/">AWS Lambda</a> using <a href="https://github.com/Miserlou/Zappa">Zappa</a> or <a href="https://aws.amazon.com/ecs/">AWS ECS</a> using <a href="https://aws.amazon.com/fargate/">AWS Fargate</a>.</li>
+</ul>
+<h3>Data</h3>
+<p>For the data layer, model the risk types and how the generic fields and field types would relate to these risk types. Field types must include <code>text</code>, <code>number</code>, <code>date</code>, or <code>enum</code> (where there are multiple potential options but only one choice can be made).</p>
+<p>Deliverables will be:</p>
+<ol start="3">
+<li>A Python file containing the ORM classes for these tables.</li>
+<li>An entity relationship diagram, which depicts the tables and their relationship to one another.</li>
+</ol>
+<h3>Backend</h3>
+<p>For the backend, create two API endpoints. One that returns a single risk type and one that returns a list of all risk types. Include all of the risk types' fields, field types, and any other data about the fields. This is your chance to show that you know how to create clean REST APIs.</p>
+<p>Deliverables will be:</p>
+<ol start="5">
+<li>A well-tested REST API written in Python.</li>
+<li>If using Django, you must use Django and/or Django REST Framework's Class-Based Views.</li>
+</ol>
+<h3>Frontend</h3>
+<p>The frontend is all about collecting information as it relates to these generic models.</p>
+<p>Deliverables will be:</p>
+<ol start="7">
+<li>Create a single page that hits your risk type API endpoint(s) and displays all of the fields to the user in a form. Be sure to display at least one field of each type on the page. Don't worry about submitting the form.</li>
+<li>Fields should use appropriate widgets based on their type. <code>text</code> fields should display as text boxes, <code>date</code> fields should use date pickers, and so on.</li>
+</ol>
+<ul>
+<li><strong>Bonus points</strong> if you come up with an elegant response for when users click on an unactivated form submit button.</li>
+<li><strong>Mega bonus points</strong> for handling form submission.</li>
+</ul>
+<h2>Questions</h2>
+<p>For questions, please use pd-hires@britecore.com.</p>
+<h2>Finished?</h2>
+<p>When you're done with the above project, please send us an email at pd-hires@britecore.com with the following deliverables:</p>
+<ol start="9">
+<li>Links to your GitHub repo with your solution</li>
+<li>The Python file called <code>quiz.py</code> that is your answer to the debugging quiz</li>
+<li>A link to a hosted instance of your application</li>
+<li>Your updated resume in PDF (preferred) or DOCX format</li>
+</ol>
+<h2>Evaluation</h2>
+<p>If you'd like to do very well on this project, we'll hand you the categories we utilize to score candidates! They are:</p>
+<ul>
+<li>Business requirements are met or exceeded</li>
+<li>All twelve deliverables are accounted for</li>
+<li>Documentation in clearly written English</li>
+<li>Django is PEP8 compliant and avoids antipatterns such as <code>local_settings</code>.</li>
+<li>Use of Class-Based Views</li>
+<li>Vue.js contains appropriate ViewModels and DOM interactions</li>
+<li>CSS Framework utilized correctly</li>
+<li>Test coverage is complete and meaningful</li>
+<li>Deployment is fully scripted</li>
+<li>Communication is positive and respectful</li>
+</ul>
+<hr>
+<p>Thank you for your time. We are excited to review your project!</p>
+</span></span></div></div><script src="./BriteCore Engineering Application_files/chunk-vendors.f935de2e.js"></script><script src="./BriteCore Engineering Application_files/app.0f7b804d.js"></script></body></html>
