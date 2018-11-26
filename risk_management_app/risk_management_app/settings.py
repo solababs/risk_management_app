@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django_extensions',
     'corsheaders',
     'rest_framework',
+    'zappa_django_utils',
     'risks'
 ]
 

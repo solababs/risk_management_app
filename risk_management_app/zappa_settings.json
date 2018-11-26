@@ -5,6 +5,10 @@
         "profile_name": "risk_manangement_app",
         "project_name": "risk-management",
         "runtime": "python3.6",
-        "s3_bucket": "risk-management-app"
+        "s3_bucket": "risk-management-app",
+        "vpc_config": {
+            "SubnetIds": ["subnet-0f8d4343", "subnet-42a8cf38", "subnet-833d14eb"],
+            "SecurityGroupIds": ["sg-044a3c38fb4eb87cb"]
+        }
     }
 }
