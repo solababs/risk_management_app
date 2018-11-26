@@ -4,24 +4,35 @@ from django.contrib.postgres.fields import JSONField
 from django.utils.translation import ugettext_lazy as _
 
 
+class FieldTypes(models.Model):
+    """
+        FieldTypes
+        Model structure for all available field data types
+        names e.g. Text, Number, Boolean, DateTime, Enum
+    """
+    id = models.UUIDField(_('ID'), default=uuid.uuid4, primary_key=True, editable=False, unique=True)
+    name = models.CharField(_('Name'), max_length=255, blank=False, unique=True)
+
+    def __str__(self):
+        return self.name
+
+
 class RiskTypes(models.Model):
     """
         RiskTypes
         Model structure for all available risk types
+        fields e.g. [{name: field_name, type: field_type}]
+            field.name => name of the field
+            field.type => data type of the field
     """
-    id = models.UUIDField(_('ID'), default=uuid.uuid4, primary_key=True, editable=False)
-    name = models.CharField(_('Name'), max_length=255, blank=False)
-    format = JSONField() # {field_name: value_type, field_name: value_type}
+    id = models.UUIDField(_('ID'), default=uuid.uuid4, primary_key=True, editable=False, unique=True)
+    name = models.CharField(_('Name'), max_length=255, blank=False, unique=True)
+    fields = JSONField(null=False)
+
+    def __str__(self):
+        return self.name
 
 
-class Risks(models.Model):
-    """
-        Risks
-        Model structure for all available risks
-    """
-    id = models.UUIDField(_('ID'), default=uuid.uuid4, primary_key=True, editable=False)
-    risk_type = models.ForeignKey(RiskTypes, on_delete=models.CASCADE)
-    format = JSONField()  # {name: 'sola', address: '20 ebinpejo lane'}
 
 
 

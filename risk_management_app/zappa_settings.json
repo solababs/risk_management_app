@@ -1,0 +1,10 @@
+{
+    "dev": {
+	"aws_region": "us-east-1",
+        "django_settings": "risk_management_app.settings",
+        "profile_name": "risk_manangement_app",
+        "project_name": "risk-management",
+        "runtime": "python3.6",
+        "s3_bucket": "risk-management-app"
+    }
+}
