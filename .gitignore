@@ -5,3 +5,4 @@ venv/
 
 **/__pycache__/
 
+risk_management_app/risk_management_app/config/**
