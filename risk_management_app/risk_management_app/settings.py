@@ -31,7 +31,7 @@ SECRET_KEY = '#dk(j9=9vrayk^a%@2rr081^ov@+&s@31l0m6_*qa2k!7h9_)r'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-# ALLOWED_HOSTS = config('ALLOWED_HOSTS', default=[], cast=Csv())
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', default=[], cast=Csv())
 
 
 # Application definition
@@ -157,4 +157,4 @@ GRAPH_MODELS = {
 
 
 # CORS_ORIGIN_WHITELIST = ALLOWED_HOSTS
-CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ORIGIN_ALLOW_ALL = True
