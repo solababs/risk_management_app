@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 
 import os
 from decouple import Csv, AutoConfig
+import django_heroku
 
 
 CONFIG_DIR = os.path.join(os.path.dirname(__file__), 'config')
@@ -47,8 +48,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
     'zappa_django_utils',
-    'risks',
-    'command'
+    'risks'
 ]
 
 MIDDLEWARE = [
@@ -157,5 +157,8 @@ GRAPH_MODELS = {
 }
 
 
-# CORS_ORIGIN_WHITELIST = ALLOWED_HOSTS
-# CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_ALLOW_ALL = True
+
+django_heroku.settings(locals())
+
+
