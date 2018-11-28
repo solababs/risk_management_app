@@ -1,6 +1,6 @@
 {
     "dev": {
-	"aws_region": "us-east-1",
+	    "aws_region": "us-east-2",
         "django_settings": "risk_management_app.settings",
         "profile_name": "risk_manangement_app",
         "project_name": "risk-management",
