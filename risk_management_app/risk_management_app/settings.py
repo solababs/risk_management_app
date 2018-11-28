@@ -47,7 +47,8 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
     'zappa_django_utils',
-    'risks'
+    'risks',
+    'command'
 ]
 
 MIDDLEWARE = [
