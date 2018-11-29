@@ -7,14 +7,12 @@ from risks.models import FieldTypes, RiskTypes, Risks
 class FieldTypesFactory(factory.DjangoModelFactory):
     class Meta:
         model = FieldTypes
-        django_get_or_create = ()
-
-    name = 'Boolean'
+        django_get_or_create = ('name',)
 
 
 class TestFieldTypesFactory(TestCase):
     def setUp(self):
-        self.field_types = FieldTypesFactory.create()
+        self.field_types = FieldTypesFactory.create(name="Text")
 
     def test_unicode(self):
         self.assertEqual(str(self.field_types), self.field_types.name)
