@@ -15,8 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from rest_framework.documentation import include_docs_urls
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
-    path('risks/', include('risks.urls', namespace="risks"))
+    path('risks/', include('risks.urls', namespace="risks")),
+    path('docs/', include_docs_urls(
+            title='RISK MANAGEMENT DOCUMENTATION',
+            authentication_classes=(),
+            permission_classes=()
+        )
+    ),
 ]
