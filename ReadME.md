@@ -15,7 +15,7 @@ This stores all the risks and their their data as it matches the associated risk
 
 
 ## Entity Relationship Diagram
-![alt text](https://github.com/solababs/risk_management_app/Risks_ERD.png "Entity Relationship Diagram")
+![Image showing entity relationship](https://github.com/solababs/risk_management_app/blob/master/risk_management_app/Risks_ERD.png?raw=true "Entity Relationship Diagram")
 
 
 # Setup 
