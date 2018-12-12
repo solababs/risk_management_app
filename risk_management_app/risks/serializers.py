@@ -62,7 +62,7 @@ class FieldTypesSerializer(serializers.ModelSerializer):
 
 class RisksSerializer(serializers.ModelSerializer):
     """
-        FieldTypesSerializer
+        RisksSerializer
     """
     class Meta:
         model = Risks
